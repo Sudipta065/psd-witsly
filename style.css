@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: border-box;
+}
+
+/* center container */
+.container {
+  height: 100vh;
+  margin: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #9257df, #ff9767);
+}
+
+/* use grid to structure calc */
+.calculator-container {
+  border-top-right-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  width: 14rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+  background: #cfd8dc;
+}
+
+.display {
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-rows: 2rem 3rem;
+  border-top-right-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+}
+
+.view {
+  height: 3rem;
+  background: #212121;
+  color: #fff;
+  text-align: end;
+}
+
+.previous {
+  grid-row: 1 / 2;
+  font-size: 1rem;
+  color: #d67f90;
+  padding-top: 0.7rem;
+  padding-right: 0.5rem;
+}
+
+.current {
+  font-size: 1.7rem;
+  padding-top: 0.2rem;
+  font-weight: 200;
+  padding-bottom: 0.7rem;
+  padding-right: 0.5rem;
+}
+
+.equals {
+  grid-column: 3 / 5;
+}
+.numbers {
+  border: 4px solid #f1f1f1;
+}
+
+.percent:hover,
+.sign:hover,
+.clear:hover,
+.equals:hover,
+.numbers:hover {
+  color: #9054e0;
+}
+
+button {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  background: #f3f3f3;
+  color: #727272;
+  cursor: pointer;
+  border: none;
+}
+.period {
+  padding-bottom: 0.4rem;
+}
+.operand {
+  background: #9054e0;
+  color: #e6d9f7;
+}
+
+.operand:hover {
+  color: #e62e89;
+}
+.equals {
+  background: #e62e89;
+  color: #fff;
+  border-bottom-right-radius: 0.2rem;
+}
+.zero {
+  border-bottom-left-radius: 0.2rem;
+}
